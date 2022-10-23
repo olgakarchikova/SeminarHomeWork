@@ -13,6 +13,7 @@ int result = CutNumber (number);
 Console.WriteLine($"second digit of number {number} is {result}");
 */
 
+/*
 // Задача 13. Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
 int ThirdDigit(int arg)
@@ -37,3 +38,24 @@ else
     int result = ThirdDigit(number);
     Console.WriteLine(result); 
 }
+*/
+
+/*
+// Задача 15. Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+int Date(int num)
+{
+    
+    if(num > 0 && num < 6)
+    {
+        Console.WriteLine("It's working day");
+    }
+    else
+    {
+        Console.WriteLine("It's weekend");
+    }
+    return num;
+}
+Console.WriteLine("Input the number of the day of the week:");
+int daynum = Convert.ToInt32(Console.ReadLine());
+int result = Date(daynum); 
+*/
