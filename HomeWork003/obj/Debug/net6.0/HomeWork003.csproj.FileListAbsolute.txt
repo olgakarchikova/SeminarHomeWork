@@ -1,0 +1,15 @@
+C:\Users\Asus\Desktop\HomeWork_Olga\HomeWork003\obj\Debug\net6.0\HomeWork003.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\HomeWork_Olga\HomeWork003\obj\Debug\net6.0\HomeWork003.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\HomeWork_Olga\HomeWork003\obj\Debug\net6.0\HomeWork003.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\HomeWork_Olga\HomeWork003\obj\Debug\net6.0\HomeWork003.AssemblyInfo.cs
+C:\Users\Asus\Desktop\HomeWork_Olga\HomeWork003\obj\Debug\net6.0\HomeWork003.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\HomeWork_Olga\HomeWork003\bin\Debug\net6.0\HomeWork003.exe
+C:\Users\Asus\Desktop\HomeWork_Olga\HomeWork003\bin\Debug\net6.0\HomeWork003.deps.json
+C:\Users\Asus\Desktop\HomeWork_Olga\HomeWork003\bin\Debug\net6.0\HomeWork003.runtimeconfig.json
+C:\Users\Asus\Desktop\HomeWork_Olga\HomeWork003\bin\Debug\net6.0\HomeWork003.dll
+C:\Users\Asus\Desktop\HomeWork_Olga\HomeWork003\bin\Debug\net6.0\HomeWork003.pdb
+C:\Users\Asus\Desktop\HomeWork_Olga\HomeWork003\obj\Debug\net6.0\HomeWork003.dll
+C:\Users\Asus\Desktop\HomeWork_Olga\HomeWork003\obj\Debug\net6.0\refint\HomeWork003.dll
+C:\Users\Asus\Desktop\HomeWork_Olga\HomeWork003\obj\Debug\net6.0\HomeWork003.pdb
+C:\Users\Asus\Desktop\HomeWork_Olga\HomeWork003\obj\Debug\net6.0\HomeWork003.genruntimeconfig.cache
+C:\Users\Asus\Desktop\HomeWork_Olga\HomeWork003\obj\Debug\net6.0\ref\HomeWork003.dll
