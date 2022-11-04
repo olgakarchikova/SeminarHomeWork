@@ -79,3 +79,90 @@ while(carrent <= N)
     carrent ++;
 }
 */
+
+// Решение с помощью метода:
+/* Задача 1.
+ 
+ int MaxNum (int a, int b)
+{
+    int max = a;
+    if(b > max) max = b;
+    return max;           
+}
+Console.Write("Input a first number: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a second number: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+int result = MaxNum(num1, num2);
+Console.WriteLine($"Max number is: {result} ");
+*/
+
+/* task 2.
+
+int ThreeNumMax(int a, int b, int c)
+{
+    int max = a;
+    if (b > max) max = b;
+    if (c > max) max = c;
+    return max;
+}
+Console.Write("Input a first number: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a second number: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a third number: ");
+int num3 = Convert.ToInt32(Console.ReadLine());
+int result = ThreeNumMax(num1, num2, num3);
+Console.WriteLine($"Max number is: {result} ");
+*/
+
+/* task 3.
+// 1 variant
+bool Chetnoe(int num)
+{
+    if (num % 2 == 0)
+    {
+        //Console.WriteLine("Четное");
+        return true;
+    }
+    else
+    {
+       // Console.WriteLine("НЕчетное");
+        return false;
+    }    
+}
+Console.Write("Input a number: ");
+int a = Convert.ToInt32(Console.ReadLine());
+bool res = Chetnoe (a);
+Console.WriteLine(res);
+*/
+/* 2 variant
+
+void Chetnoe (int a)
+{
+    if(a % 2 == 0)
+        Console.WriteLine ("Число четное");
+    else
+         Console.WriteLine ("Число нечетное");
+}
+Console.Write("Input a number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+Chetnoe(num);
+*/
+/*
+// task 3
+void Chetnum (int num)
+{
+    int current = 1;
+    while(current <= num)
+    {
+        if(current % 2 == 0)
+        Console.WriteLine(current + " ");
+    current ++;
+    }
+}
+
+Console.Write("Input a number: ");
+int N = Convert.ToInt32(Console.ReadLine());
+Chetnum(N);
+*/
