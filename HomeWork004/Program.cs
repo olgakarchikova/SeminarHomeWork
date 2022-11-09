@@ -16,6 +16,7 @@ int b = Convert.ToInt32(Console.ReadLine());
 Degree(a,b);
 */
 
+/*
 //Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
 int Sum (int n)
@@ -32,3 +33,6 @@ Console.WriteLine("Input a number: ");
 int num = Convert.ToInt32(Console.ReadLine());
 int result = Sum(num);
 Console.WriteLine($"Sum of numbers numbers {num} = {result}" );
+*/
+
+//Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
