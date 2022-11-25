@@ -35,13 +35,17 @@ ShowArray(myArray);
 int result = SumPozitive(myArray);
 Console.WriteLine($"The number of numbers > 0 is: {result}");
 */
-//Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+
+//Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, 
+//заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
 
 void Point(double b1, double k1, double b2, double k2)
 {
     double x = (b2-b1)/(k1-k2);
+    double alignX = Math.Round(x,1);
     double y = k1 * x + b1;
-    Console.WriteLine($"Intersection coordinates at the point: X {x}, Y {y} ");   
+    double alignY = Math.Round(y,1);
+    Console.WriteLine($"Intersection coordinates at the point: X {alignX}, Y {alignY} ");   
 }
 
 Console.WriteLine("Input the coefficient values B1: ");
