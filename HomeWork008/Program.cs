@@ -60,24 +60,24 @@ Show2Array(myArray);
 
 void MinSumRow(int [,] array)
 {
-    //int minSumRow = 0;
+    int minSum = 0, indexRow = 0; 
+    for (int i = 0; i < array.GetLength(1); i++) 
+        minSum += array[0,i];
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        int sumRow = 0;
-        for (int j = 0; j < array.GetLength(1); j++)
+        int sum = 0;
+        minSum += array[0,i];
+        for (int j = 0; j < array.GetLength(1); j++) 
+            sum += array [i,j];
+        Console.WriteLine($"Sum of the row {i+1} = {sum};" + " ");
+        
+        if (sum < minSum) 
         {
-            sumRow += array [i,j];
-        }  
-        Console.Write(sumRow + " ");
-        int minSumRow = array[0,i];
-        if (sumRow < minSumRow) 
-        {   
-            minSumRow = sumRow;
+            minSum = sum;
+            indexRow = i;
         }
-        Console.Write($"minimum sum {minSumRow} of elements in a row {i}");
     }
-
-    Console.WriteLine();   
+    Console.WriteLine($"The row with the minimum sum of elements is {indexRow + 1}");
 }
 
 Console.WriteLine("Input a number of rows");

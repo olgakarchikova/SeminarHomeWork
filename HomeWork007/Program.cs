@@ -107,7 +107,7 @@ void AvgColums(int [,] array)
 {
     for (int j = 0; j < array.GetLength(1); j++)
     {
-        double avg = 0;
+        double avg = 0; // обнуляем переменную заходя в новый цикл
         for (int i = 0; i < array.GetLength(0); i++)
             avg += array[i,j];
     avg = avg / array.GetLength(0);
