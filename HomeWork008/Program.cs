@@ -1,9 +1,9 @@
 ﻿// Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию 
 // элементы каждой строки двумерного массива.
 /*
-int [,] CreateRandom2Array(int rows, int colums)
+int [,] CreateRandom2Array(int rows, int columns)
 {
-    int [,] array = new int[rows, colums];
+    int [,] array = new int[rows, columns];
 
     for (int i = 0; i < rows; i ++)
         for (int j = 0; j < colums; j++)
@@ -43,7 +43,7 @@ void SortedDown(int [,] array)
 
 Console.WriteLine("Input a number of rows");
 int m = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input a number of colums");
+Console.WriteLine("Input a number of columns");
 int n = Convert.ToInt32(Console.ReadLine());
 
 int [,] myArray = CreateRandom2Array(m, n);
@@ -81,7 +81,7 @@ void MinSumRow(int [,] array)
 
 Console.WriteLine("Input a number of rows");
 int m = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input a number of colums");
+Console.WriteLine("Input a number of columns");
 int n = Convert.ToInt32(Console.ReadLine());
 
 int [,] myArray = CreateRandom2Array(m, n);
@@ -89,9 +89,10 @@ Show2Array(myArray);
 MinSumRow (myArray);
 */
 
+/*
 //Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
 
-void [,] CreateRandom(int[,] array)
+void CreateRandom2Array(int[,] array)
 {  
      for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -102,51 +103,105 @@ void [,] CreateRandom(int[,] array)
     }
 }
 
-void ShowMatrix1(int [,] matrix1)
+void Show2Array(int [,] array)
 {
-    for (int i = 0; i < matrix1.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-         for (int j = 0; j < matrix1.GetLength(1); j++)
-            Console.Write(matrix1[i,j] + " ");
+         for (int j = 0; j < array.GetLength(1); j++)
+            Console.Write(array[i,j] + " ");
         Console.WriteLine();
     }
 }
 
-int[,] DivMatrix(int[,] matrix1, int[,] matrix2)
+int[,] MultiplyArray(int[,] firstArray, int[,] secondArray)
 {
-    var matrix3 = new int[matrix1.GetLength(0), matrix2.GetLength(1)];
-    if (matrix1.GetLength(1) == matrix2.GetLength(0))
+    int [,] resultArray = new int[firstArray.GetLength(0), secondArray.GetLength(1)];
+    if (firstArray.GetLength(1) != secondArray.GetLength(0))
+        Console.WriteLine("Сannot be multiplied");
+
+    for (int i = 0; i < resultArray.GetLength(0); i++)
     {
-        for (int i = 0; i < matrix3.GetLength(0); i++)
+        for (int j = 0; j < resultArray.GetLength(1); j++)
         {
-            for (int j = 0; j < matrix3.GetLength(1); j++)
+            resultArray[i, j] = 0;
+            for (int n = 0; n < firstArray.GetLength(1); n++)
             {
-                matrix3[i, j] = 0;
-                for (int n = 0; n < matrix1.GetLength(1); n++)
-                {
-                    matrix3[i, j] += matrix1[i, n] * matrix2[n, j];
-                }
+                resultArray[i, j] += firstArray[i, n] * secondArray[n, j];
             }
         }
     }
-    return matrix3;
+    return resultArray;
+}
+
+Console.WriteLine("Input a number of rows");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input a number of columns");
+int columns = Convert.ToInt32(Console.ReadLine());
+
+int[,] firstArray = new int[rows, columns];
+int[,] secondArray = new int[rows, columns];
+
+CreateRandom2Array(firstArray);
+Show2Array(firstArray);
+Console.WriteLine();
+
+CreateRandom2Array(secondArray);
+Show2Array(secondArray);
+Console.WriteLine();
+
+Show2Array(MultiplyArray(firstArray,secondArray));
+*/
+
+//Задача 60. Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
+//Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+
+
+int [,,] CreateRandom3Array(int page, int rows, int columns, int min, int max)
+{
+    int [,,] array = new int[page, rows, columns];
+
+    for (int k = 0; k < array.GetLength(0); k ++)
+        for (int i = 0; i < array.GetLength(1); i++)
+            for (int j = 0; j < array.GetLength(2); j++)
+                array[k,i,j] = new Random().Next(min,max+1);
+    return array;
+}
+
+void Show3Array(int [,,] array)
+{
+    for (int k = 0; k < array.GetLength(0); k ++)
+    {   
+        Console.WriteLine();
+        for (int i = 0; i < array.GetLength(1); i++)
+        {    
+            Console.WriteLine();
+            for (int j = 0; j < array.GetLength(2); j++)
+            {    
+                Console.Write($"{array[k,i,j]} ({k},{i},{j})" + " "); 
+            }    
+            
+        }            
+    }    
+}
+
+void NonRepeating(int [,,] array)
+{
+    for (int k = 0; k < array.GetLength(0); k ++)
+        for (int i = 0; i < array.GetLength(1); i++)
+        int value = array[]
+            for (int j = 0; j < array.GetLength(2); j++)
+                if (i != j)
+
 }
 
 
-Console.WriteLine("Enter the number of rows of the first matrix");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Enter the number of columns of the first matrix");
-int b = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input a first value");
+int x = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input a number of rows");
+int y = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input a number of columns");
+int z = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Enter the number of rows of the second matrix");
-int c = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Enter the number of columns of the second matrix");
-int d = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine();
+int [,,] myArray = CreateRandom3Array(x, y, z);
+Show3Array(myArray);
 
-int [,] matrix1 = CreateRandomMatrix1(a, b);
-int [,] matrix2 = CreateRandomMatrix2(c, d);
-
-ShowMatrix1(matrix1);
-Console.WriteLine();
-ShowMatrix2(matrix2);
