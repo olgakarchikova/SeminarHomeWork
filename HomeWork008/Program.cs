@@ -6,10 +6,11 @@ int [,] CreateRandom2Array(int rows, int columns)
     int [,] array = new int[rows, columns];
 
     for (int i = 0; i < rows; i ++)
-        for (int j = 0; j < colums; j++)
+        for (int j = 0; j < columns; j++)
             array[i,j] = new Random().Next(0,10);
     return array;
 }
+
 void Show2Array(int [,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -155,15 +156,17 @@ Show2Array(MultiplyArray(firstArray,secondArray));
 //Задача 60. Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
 //Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
 
+// НЕ Решена 
 
-int [,,] CreateRandom3Array(int page, int rows, int columns, int min, int max)
+/*
+int [,,] CreateRandom3Array(int page, int rows, int columns)
 {
     int [,,] array = new int[page, rows, columns];
 
     for (int k = 0; k < array.GetLength(0); k ++)
         for (int i = 0; i < array.GetLength(1); i++)
             for (int j = 0; j < array.GetLength(2); j++)
-                array[k,i,j] = new Random().Next(min,max+1);
+                array[k,i,j] = new Random().Next(10,99);
     return array;
 }
 
@@ -184,17 +187,6 @@ void Show3Array(int [,,] array)
     }    
 }
 
-void NonRepeating(int [,,] array)
-{
-    for (int k = 0; k < array.GetLength(0); k ++)
-        for (int i = 0; i < array.GetLength(1); i++)
-        int value = array[]
-            for (int j = 0; j < array.GetLength(2); j++)
-                if (i != j)
-
-}
-
-
 Console.WriteLine("Input a first value");
 int x = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input a number of rows");
@@ -204,4 +196,48 @@ int z = Convert.ToInt32(Console.ReadLine());
 
 int [,,] myArray = CreateRandom3Array(x, y, z);
 Show3Array(myArray);
+*/
 
+
+//Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
+
+int n = 4;
+int[,] spiralMatrix = new int[n, n];
+
+int num = 1;
+int i = 0;
+int j = 0;
+
+while (num <= spiralMatrix.GetLength(0) * spiralMatrix.GetLength(1))
+{
+  spiralMatrix[i, j] = num;
+  if (i <= j + 1 && i + j < spiralMatrix.GetLength(1) - 1)
+    j++;
+  else if (i < j && i + j >= spiralMatrix.GetLength(0) - 1)
+    i++;
+  else if (i >= j && i + j > spiralMatrix.GetLength(1) - 1)
+    j--;
+  else
+    i--;
+    num++;
+}
+
+void Show2Array (int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i, j] < 10)
+            {
+                Console.Write("0" + array[i, j]);
+                Console.Write(" ");
+            }
+            else Console.Write(array[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
+
+Show2Array(spiralMatrix);
