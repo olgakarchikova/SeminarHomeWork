@@ -56,8 +56,27 @@ Show2Array(myArray);
 
 //Задача 56: Задайте прямоугольный двумерный массив. 
 //Напишите программу, которая будет находить строку с наименьшей суммой элементов.
-
 /*
+int [,] CreateRandom2Array(int rows, int columns)
+{
+    int [,] array = new int[rows, columns];
+
+    for (int i = 0; i < rows; i ++)
+        for (int j = 0; j < columns; j++)
+            array[i,j] = new Random().Next(0,10);
+    return array;
+}
+
+void Show2Array(int [,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+         for (int j = 0; j < array.GetLength(1); j++)
+            Console.Write(array[i,j] + " ");
+        Console.WriteLine();
+    }
+}
+
 void MinSumRow(int [,] array)
 {
     int minSum = 0, indexRow = 0; 
@@ -90,9 +109,9 @@ Show2Array(myArray);
 MinSumRow (myArray);
 */
 
-/*
-//Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
 
+//Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+/*
 void CreateRandom2Array(int[,] array)
 {  
      for (int i = 0; i < array.GetLength(0); i++)
@@ -156,7 +175,7 @@ Show2Array(MultiplyArray(firstArray,secondArray));
 //Задача 60. Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
 //Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
 
-// НЕ Решена 
+// Задача решена не до конца!! 
 
 /*
 int [,,] CreateRandom3Array(int page, int rows, int columns)
@@ -201,6 +220,8 @@ Show3Array(myArray);
 
 //Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
 
+// Павел, честно, не разобралась, просто скопипастила с нета :(
+/*    
 int n = 4;
 int[,] spiralMatrix = new int[n, n];
 
@@ -241,3 +262,4 @@ void Show2Array (int[,] array)
 
 
 Show2Array(spiralMatrix);
+*/
